@@ -1,0 +1,29 @@
+{
+  "name": "market-tickers",
+  "version": "1.0.0",
+  "description": "list of shares",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stark1996/market-tickers.git"
+  },
+  "keywords": [
+    "node",
+    "JS"
+  ],
+  "author": "steven",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stark1996/market-tickers/issues"
+  },
+  "homepage": "https://github.com/stark1996/market-tickers#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}

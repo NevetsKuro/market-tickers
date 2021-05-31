@@ -1,0 +1,114 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market</title>
+  <style>
+    body {
+      background-color: #191d28;
+      font-family: sans-serif;
+    }
+
+    table {
+      color: grey;
+      width: 70%;
+      text-align: center;
+      margin: 80px auto;
+      font-size: 16px;
+      line-height: 1.6;
+      font-weight: bold;
+    }
+
+    table>thead>tr {
+      color: #7a7c82;
+      background-color: transparent;
+    }
+
+    table>tbody>tr {
+      color: white;
+      margin: "2 0";
+    }
+
+    table>tbody>tr:not(.spaceUnder)>td {
+      background-color: #2e3241;
+    }
+
+    table>tbody>tr td:first-child {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    table>tbody>tr td:last-child {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    tr.spaceUnder {
+      background-color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      <img src="#" alt="" />
+    </div>
+    <div>
+      <select>
+        <option>INR</option>
+      </select>
+      <select>
+        <option>BTC</option>
+      </select>
+    </div>
+    <div>
+      <span>50</span>
+      <span>Contact Telegram</span>
+      <span><input type="checkbox" /></span>
+    </div>
+  </header>
+  <section>
+    <table cellpadding="5" cellspacing="0">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>name</th>
+          <th>last</th>
+          <th>Buy/Sell Price</th>
+          <th>volume</th>
+          <th>base_unit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i=0; i<top10.length; i++) {%>
+          <tr>
+            <td>
+              <%= (i+1) %>
+            </td>
+            <td>
+              <%= top10[i].name%>
+            </td>
+            <td>
+              ₹ <%= top10[i].last%>
+            </td>
+            <td>
+              ₹ <%= top10[i].buy%> / ₹ <%= top10[i].sell%>
+            </td>
+            <td>
+              <%= top10[i].volume%>
+            </td>
+            <td>
+              <%= top10[i].base_unit%>
+            </td>
+          </tr>
+          <tr class="spaceUnder">
+            <td colspan="6"></td>
+          </tr>
+          <% } %>
+      </tbody>
+    </table>
+  </section>
+</body>
+
+</html>
